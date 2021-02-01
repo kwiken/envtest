@@ -11,10 +11,10 @@ on:
   workflow_dispatch:
      branches: [ test, main ]
      inputs:
-     myenv:
-       description: 'What environment to use'
-       required: true
-       default: 'build'
+       myenv:
+         description: 'What environment to use'
+         required: true
+         default: 'build'
 
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
