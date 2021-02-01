@@ -32,4 +32,4 @@ jobs:
       # Runs a set of commands using the runners shell
       - name: Pring client id
         run: |
-          echo {{ secrets.CLIENT_ID }}
+          echo ${{ secrets.CLIENT_ID }}
