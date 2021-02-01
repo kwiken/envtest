@@ -2,6 +2,9 @@
 
 name: EnvironmentTest
 
+env:
+  envName:  build
+
 # Controls when the action will run. 
 on:
   # Allows you to run this workflow manually from the Actions tab
@@ -16,10 +19,7 @@ jobs:
   build:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
-    
-    env:
-      envName:  build
-    
+        
     environment:
       name: ${{env.envName}}
         
