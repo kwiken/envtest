@@ -7,8 +7,8 @@ if($clientId -eq 'build' ) {
   Write-Host 1
 } elseif($clientId -eq 'test') {
   Write-Host 'ClientId is test'
-  Write-Host 1
+  Write-Host 2
 } else {
   Write-Host 'ClientId is unknown'
-  Write-Host 1
+  Write-Host 3
 }
