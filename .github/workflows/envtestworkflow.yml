@@ -29,7 +29,11 @@ jobs:
         envName:  build
       # Runs a single command using the runners shell
     - name: Run a one-line script
-      run: echo "Hello $envName"
+      run: echo "Hello $FIRST_NAME $middle_name $Last_Name"
+      env:
+        FIRST_NAME: Ola
+        middle_name: Jante
+        Last_Name: Nordmann
 
       # Runs a set of commands using the runners shell
     - name: Run test script
