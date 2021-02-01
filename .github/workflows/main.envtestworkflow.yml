@@ -2,20 +2,12 @@
 
 name: EnvironmentTest
 
-env:
-  envName:  build
 
 # Controls when the action will run. 
 on:
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
-     branches: [ test, main ]
-     inputs:
-       myenv:
-         description: 'What environment to use'
-         required: true
-         default: 'build'
-
+     branches: [ main ]
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -26,7 +18,7 @@ jobs:
     runs-on: ubuntu-latest
     
     environment:
-      name: ${{ github.event.inputs.name }}
+      name: build
         
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:        
