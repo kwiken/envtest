@@ -33,3 +33,7 @@ jobs:
       - name: Pring client id
         run: |
           echo ${{ secrets.CLIENT_ID }}
+          if [${{ secrets.CLIENT_ID }} = "build"]
+          then
+            echo "build"
+          fi
