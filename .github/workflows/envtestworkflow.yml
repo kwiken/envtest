@@ -10,6 +10,11 @@ on:
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
      branches: [ test, main ]
+     inputs:
+     myenv:
+       description: 'What environment to use'
+       required: true
+       default: 'build'
 
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
@@ -21,7 +26,7 @@ jobs:
     runs-on: ubuntu-latest
     
     environment:
-      name: $GITHUB_REF
+      name: ${{ github.event.inputs.name }}
         
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:        
