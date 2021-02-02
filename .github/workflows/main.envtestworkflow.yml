@@ -14,10 +14,10 @@ jobs:
   
   branchCheck:
     runs-on: ubuntu-latest
-    if: github.ref != 'refs/heads/main'
+    if: github.ref == 'refs/heads/main'
     steps:
       - name: Check valid branch
-        run: exit "only allowed to run this workflow for main branch"
+        run: exit 0
 
   # This workflow contains a single job called "build"
   build:
